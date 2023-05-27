@@ -15,11 +15,11 @@ const filteredItems = selectedCategory === "All" ? items : items.filter(item => 
   return (
     <div className="ShoppingList">
       <div className="Filter">
-        <select value={filteredItems} onChange={handleSelect} name="filter">
-          <option value="All">Filter by category</option>
-          <option value="Produce">Produce</option>
-          <option value="Dairy">Dairy</option>
-          <option value="Dessert">Dessert</option>
+        <select value={selectedCategory} onChange={handleSelect} name="filter">
+          <option value="All" onChange={handleSelect}>All</option>
+          <option value={"Produce"} onChange={handleSelect}>Produce</option>
+          <option value="Dairy" onChange={handleSelect}>Dairy</option>
+          <option value="Dessert" onChange={handleSelect}>Dessert</option>
         </select>
       </div>
       <ul className="Items">
